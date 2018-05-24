@@ -25,7 +25,7 @@ X_train = sc.fit_transform(X_train)
 X_val = sc.transform(X_val)
 X_test = sc.transform(X_test)
 
-
+m=len(X_train)
 # Now we define all our functions
 
 def softmax(z):
@@ -85,7 +85,7 @@ def backward_prop(model,cache,y):
     
     
     # Calculate loss derivative with respect to output
-    dz2 = loss_derivative(y,a2)
+    dz2 = y-a2
 
     # Calculate loss derivative with respect to second layer weights
     dW2 = (a1.T).dot(dz2) #dW2 = 1/m*(a1.T).dot(dz2) 
@@ -114,8 +114,7 @@ def initialize_parameters(nn_input_dim,nn_hdim,nn_output_dim):
     # Second layer weights
     W2 = np.random.rand(nn_hdim, nn_output_dim)/np.sqrt(nn_hdim)
     b2 = np.zeros((1,nn_output_dim))
-    
-    
+     
     # Package and return model
     model = { 'W1': W1, 'b1': b1, 'W2': W2, 'b2': b2}
     return model
