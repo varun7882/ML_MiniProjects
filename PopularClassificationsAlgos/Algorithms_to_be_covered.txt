@@ -1,9 +1,9 @@
 Classification Algorithm to be covered:
 
 
-1. Logistic Regression(DONE)
+1. Logistic Regression (DONE)
 2. Decision Tree
-3. SVM																 
+3. SVM (DONE)																 
 4. Naive Bayes
 5. kNN (DONE)																 
 6. K-Means						                                     
