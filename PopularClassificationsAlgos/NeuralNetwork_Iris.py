@@ -36,3 +36,5 @@ print cm
 from sklearn.metrics import f1_score
 print 'f-score(weighted) is : '
 print f1_score(y_test,y_pred_test,average='weighted')
+
+#Accuracy 1
